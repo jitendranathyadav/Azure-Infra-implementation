@@ -63,23 +63,7 @@ The solution enforces compliance across all subscriptions and ensures a secure, 
 │   └── logic-app-workflow.json
 └── diagrams/
 
-/azure-governance-zero-trust
-├── policies/
-│   ├── tagging.json
-│   ├── allowed-locations.json
-│   └── zero-trust.json
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   └── modules/
-│       ├── policy_definition/
-│       └── policy_assignment/
-├── remediation/
-│   ├── tagging-remediation.ps1
-│   ├── zero-trust-remediation.ps1
-│   └── logic-app-workflow.json
-└── diagrams/
+
 
 
 🚀 Deployment Steps
@@ -94,11 +78,13 @@ The solution enforces compliance across all subscriptions and ensures a secure, 
   5. Assign policies at Management Group or Subscription scope
 
 🧪 Validation
+
     #  Check compliance under Azure Policy → Compliance
     #  Validate RBAC assignments for least privilege
     #  Verify that untagged resources are auto-remediated
 
 🏆 Real Business Outcomes
+
     *  100% Azure compliance
     *  Zero unauthorized deployments
     *  Elimination of manual governance tasks
