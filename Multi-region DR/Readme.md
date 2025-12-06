@@ -17,55 +17,45 @@ This project designs and deploys a multi-region Disaster Recovery (DR) strategy 
               +-------+                               +---------+
 
 ✨ Features
-
-         *         Multi-region architecture
-
-  
-*     Automated replication
-*     Traffic Manager failover
-*     DR drills
-*     Automated RTO/RPO validation
+         
+         -         Multi-region architecture
+         -         Automated replication
+         -         Traffic Manager failover
+         -         DR drills
+         -         Automated RTO/RPO validation
 
 🛠 Technologies
 
-Azure Site Recovery
-
-Azure SQL Failover Groups
-
-Azure Traffic Manager
-
-Azure Automation
+         -         Azure Site Recovery
+         -         Azure SQL Failover Groups
+         -         Azure Traffic Manager
+         -         Azure Automation
 
 Terraform
 
 📁 Folder Structure
-/multi-region-dr
-├── terraform/
-│   ├── network/
-│   ├── compute/
-│   ├── database/
-│   ├── failover/
-├── failover-scripts/
-│   ├── start-failover.ps1
-│   └── validate-dr.ps1
-└── diagrams/
+
+         /multi-region-dr
+                  ├── terraform/
+                  │   ├── network/
+                  │   ├── compute/
+                  │   ├── database/
+                  │   ├── failover/
+                  ├── failover-scripts/
+                  │   ├── start-failover.ps1
+                  │   └── validate-dr.ps1
+                  └── diagrams/
 
 🚀 Deployment Steps
 
-Deploy core infra
-
-Enable ASR
-
-Configure SQL Failover Groups
-
-Configure Traffic Manager
-
-Setup automated failover script
+         -         Deploy core infra
+         -         Enable ASR
+         -         Configure SQL Failover Groups
+         -         Configure Traffic Manager
+         -         Setup automated failover script
 
 🧪 Validation
 
-Perform DR drill
-
-Validate DNS failover
-
-Validate replication health
+         -         Perform DR drill
+         -         Validate DNS failover
+         -         Validate replication health
