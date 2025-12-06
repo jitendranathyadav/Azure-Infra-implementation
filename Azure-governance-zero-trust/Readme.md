@@ -45,23 +45,23 @@ The solution enforces compliance across all subscriptions and ensures a secure, 
 
 📁 Project Structure
 
-/azure-governance-zero-trust
-├── policies/
-│   ├── tagging.json
-│   ├── allowed-locations.json
-│   └── zero-trust.json
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   └── modules/
-│       ├── policy_definition/
-│       └── policy_assignment/
-├── remediation/
-│   ├── tagging-remediation.ps1
-│   ├── zero-trust-remediation.ps1
-│   └── logic-app-workflow.json
-└── diagrams/
+    /azure-governance-zero-trust
+    ├── policies/
+    │   ├── tagging.json
+    │   ├── allowed-locations.json
+    │   └── zero-trust.json
+    ├── terraform/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   ├── outputs.tf
+    │   └── modules/
+    │       ├── policy_definition/
+    │       └── policy_assignment/
+    ├── remediation/
+    │   ├── tagging-remediation.ps1
+    │   ├── zero-trust-remediation.ps1
+    │   └── logic-app-workflow.json
+    └── diagrams/
 
 
 
