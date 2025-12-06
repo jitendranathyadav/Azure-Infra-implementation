@@ -5,6 +5,8 @@ Azure Governance & Zero Trust Automation (Policy-as-Code)
 This project implements a complete Azure Cloud Governance Framework using Azure Policies, RBAC, Zero Trust principles, tagging standards, and automated remediation workflows.
 The solution enforces compliance across all subscriptions and ensures a secure, auditable, and standardized cloud environment.
 
+Architecture Diagram
+
                    +---------------------------+
                    | Management Group          |
                    |  - Azure Policies         |
@@ -12,20 +14,20 @@ The solution enforces compliance across all subscriptions and ensures a secure, 
                    |  - Tagging Standards      |
                    +------------+--------------+
                                 |
-                   +------------v--------------+
-                   | Subscriptions (Prod/NonProd) |
+                   +----------------v--------------+
+                   | Subscriptions (Prod/NonProd)  |
                    |  - Policy Assignments         |
                    |  - Remediation Tasks          |
                    +------------+------------------+
                                 |
-             +------------------+------------------+
-             | Azure Automation / Logic Apps       |
-             |  - Remediation Workflows            |
-             |  - Enforce Tag Compliance           |
-             +-------------------------------------+
+               +------------------+------------------+
+               | Azure Automation / Logic Apps       |
+               |  - Remediation Workflows            |
+               |  - Enforce Tag Compliance           |
+               +-------------------------------------+
 
 
-Architecture Diagram
+
                    +---------------------------+
                    | Management Group          |
                    |  - Azure Policies         |
