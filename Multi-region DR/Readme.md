@@ -17,7 +17,10 @@ This project designs and deploys a multi-region Disaster Recovery (DR) strategy 
               +-------+                               +---------+
 
 ✨ Features
-    *     Multi-region architecture
+
+         *         Multi-region architecture
+
+  
 *     Automated replication
 *     Traffic Manager failover
 *     DR drills
