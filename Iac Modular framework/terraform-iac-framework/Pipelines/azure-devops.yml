@@ -1,1 +1,28 @@
 # CI pipeline placeholder
+trigger:
+- main
+
+stages:
+- stage: Plan
+  jobs:
+  - job: Plan
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: |
+        terraform init -backend-config=backend.tfvars
+        terraform plan -var-file=env/dev.tfvars
+      displayName: 'Terraform Plan'
+
+- stage: ApplyProd
+  dependsOn: Plan
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - job: Apply
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: |
+        terraform init -backend-config=backend.tfvars
+        terraform apply -auto-approve -var-file=env/prod.tfvars
+      displayName: 'Terraform Apply Prod'

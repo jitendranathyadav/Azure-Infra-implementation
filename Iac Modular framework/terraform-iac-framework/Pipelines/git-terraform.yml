@@ -1,0 +1,24 @@
+name: 'Terraform'
+on:
+  push:
+    branches: [ 'main' ]
+  workflow_dispatch:
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v2
+      - run: terraform init -backend-config=backend.tf
+      - run: terraform plan -var-file=env/dev.tfvars
+
+  apply-prod:
+    needs: plan
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v2
+      - run: terraform init -backend-config=backend.tf
+      - run: terraform apply -auto-approve -var-file=env/prod.tfvars
