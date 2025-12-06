@@ -7,26 +7,21 @@ This project designs and deploys a multi-region Disaster Recovery (DR) strategy 
 🏗 Architecture Diagram
 
          PRIMARY REGION                          SECONDARY REGION
-+-----------------------+                 +------------------------+
-|  App Servers (VM/AKS) |   Replication   |  App Servers (Standby) |
-|  DB (Azure SQL)       |---------------> |  DB (Failover Group)   |
-+-----------------------+                 +------------------------+
+         +-----------------------+                 +------------------------+
+         |  App Servers (VM/AKS) |   Replication   |  App Servers (Standby) |
+         |  DB (Azure SQL)       |---------------> |  DB (Failover Group)   |
+         +-----------------------+                 +------------------------+
          |                                        |
-     +---v---+                               +----v----+
-     | LB/AG | -- Failover via Traffic Mgr -->| LB/AG  |
-     +-------+                               +---------+
+              +---v---+                               +----v----+
+              | LB/AG | -- Failover via Traffic Mgr -->| LB/AG  |
+              +-------+                               +---------+
 
 ✨ Features
-
-Multi-region architecture
-
-Automated replication
-
-Traffic Manager failover
-
-DR drills
-
-Automated RTO/RPO validation
+         *     Multi-region architecture
+         *     Automated replication
+         *     Traffic Manager failover
+         *     DR drills
+         *     Automated RTO/RPO validation
 
 🛠 Technologies
 
