@@ -33,7 +33,7 @@ Architecture Diagram
                    +------------+--------------+
                                 |
                    +------------v--------------+
-                   | Subscriptions (Prod/NonProd) |
+                   | Subscriptions (Prod/NonProd)  |
                    |  - Policy Assignments         |
                    |  - Remediation Tasks          |
                    +------------+------------------+
