@@ -45,7 +45,7 @@ It supports reusable modules, environment-specific overrides, and CI/CD pipeline
     │   ├── compute/
     │   ├── storage/
     │   └── aks/
-    ├── env/
+    ├── Env/
     │   ├── dev/
     │   ├── qa/
     │   ├── prod/
