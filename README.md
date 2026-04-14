@@ -1,3 +1,6 @@
+![Logo]<img width="2400" height="448" alt="image" src="https://github.com/user-attachments/assets/05c7951e-fe07-4e71-a8ea-5374f45716e5" />
+
+
 <h1 align="center">Hi 👋, This is Jitendra Yadav</h1>
 
 <h3 align="center">A passionate Infrastructure, IAM and DevSecOps Engineer, Mastering in Cloud technologies</h3>
